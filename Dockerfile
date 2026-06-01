@@ -7,3 +7,4 @@ COPY index.html /usr/share/nginx/html/index.html
 # Step 3: Nginx default port 80 use karta hai
 EXPOSE 80
         
+   
