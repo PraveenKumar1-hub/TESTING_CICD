@@ -1,12 +1,9 @@
-# Base image (Python ki light version)     
-FROM python:3.9-slim
+# Step 1: Base image lena (Nginx server)
+FROM nginx:alpine
 
-# Working directory set karo    
-WORKDIR /app  
+# Step 2: Apne code (html file) ko container ke web folder mein copy karna
+COPY index.html /usr/share/nginx/html/index.html
 
-# Ye line aapke code ko folder se container mein daalti hai
-COPY . .
-# Ek simple command jo container chalne par print karegi
-CMD ["echo", "Hello, DevOps Pipeline is working!"]     
-  
+# Step 3: Nginx default port 80 use karta hai
+EXPOSE 80
         
